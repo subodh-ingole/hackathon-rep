@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Registration Page</title>
+    <style>
+        #Header{
+      position: fixed;
+      top:0px;
+      background-image: linear-gradient(rgb(12, 68, 237),rgb(255, 255, 255),rgb(12, 68, 237));
+      width: 100%;
+      text-align: center;
+      color:rgb(0, 0, 0);
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+      sans-serif;
+      }
+      #Footer{
+          width: 100%;
+          position: fixed;
+          bottom: 0px;
+          background-color:rgb(145, 152, 218) ;  
+      }
+body{
+    background-color: #EEEEEE;
+    font-family: "Open Sans";
+    font-size: 16px;
+    text-align: center;
+}
+.center{
+    margin: auto;
+    width: 425px;
+}
+.selector{
+    font-family: "Open Sans";
+    font-size: 18px;
+    width: 425px;
+    margin-left: auto;
+margin-right: auto;
+    position: relative;   
+    text-align: center;
+}
+.heading{
+    font-family: "Open Sans";
+    font-size: 32px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #F00;
+}
+      </style>
+    <link href="/css/Registration.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <br>
+    <br>
+    <div id="Header">
+        <h2>Digital Agency</h2> 
+    </div>
+    <div class="container">
+      <div class="row col-md-6 col-md-offset-3">
+          <div class="card card-primary">
+              <div class="card-heading">
+             <h1>Registration Form</h1>
+              </div>
+            <div class="card-body">
+                <form action="/registration" method="POST" >
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" name="LastName"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+                        <div>
+                        <label for="male" class="radio-inline"><input onclick="" type="radio" name="gender" value="m" id="male">
+                            Male</label>
+                        <label for="female" class="radio-inline"><input type="radio" name="gender" value="f" id="female">
+                            Female</label>
+                        <label for="others" class="radio-inline"><input type="radio" name="gender" value="o" id="others">
+                            Others</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" id="email" name="email"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="text" class="form-control" id="password" name="password"/>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="phonenumber">Phone Number</label>
+                        <input type="text" class="form-control" id="phonenumber" name="phonenumber"/>
+                        <br>
+                        <div align="center">
+                            <select id="stateSelect" onchange="stateSelected();" class="selector">
+                                <option value="" selected="selected">Select a State</option>
+                                <option value="stateGujarat">Gujarat</option> 
+                                <option value="stateMaharashtra">Maharashtra</option>
+                                </select>
+                                </div>
+                                <br>
+                                <div align="center">
+                                    <select id="DistrictSelect" onchange="DistrictSelected();" class="selector">
+                                        <option value="" selected="selected">Select District</option>
+                                        <option value="DistrictMumbai">Mumbai</option> 
+                                        <option value="DistrictPune">Pune</option>
+                                        <option value="DistrictAnand">Anand</option>
+                                        <option value="DistrictJamnagar">Jamnagar</option>
+                                        </select>
+                                        </div>
+
+                       <br>
+                       <br>
+                       <div class="form-group" align="left">
+                        <label  for="City">Enter City</label>
+                        <input type="text" class="form-control" id="city" name="Enter City"/>
+                    </div>
+                    <br>
+             <input type="submit" class="btn btn-primary">
+                </form>
+            </div> 
+            <br>
+            <div class=" card-footer text-right">
+                &copy; Digital Agency
+            </div> 
+    <div id="Footer">
+        <h4 text align="center">All rights reserved  &copy;Digital Agency</h4>
+    </div>
+
+</body>
+</html>
